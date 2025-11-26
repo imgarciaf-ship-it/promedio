@@ -60,3 +60,4 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(calculateAverage, 10); 
     });
 });
+
