@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Promedio Escolar | Funcional</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        
+        <header class="header-box">
+            <h1 class="main-title">Calculadora de Promedio</h1>
+            <p class="sub-title">Lapso</p>
+        </header>
+
+        <nav class="nav-section">
+            
+            <a class="nav-item" href="https://www.instagram.com/itsis4aa_/" target="_blank">
+                <span class="emoji">📝</span> Sobre mi <span class="emoji">🌸</span>
+            </a>
+            
+            <div class="clover">🍀</div>
+            
+            <a class="nav-item" href="https://www.instagram.com/ueipab/?hl=en" target="_blank">
+                <span class="emoji">🔗</span> UEIPAB <span class="emoji">💖</span>
+            </a>
+            
+        </nav>
+
+        <main class="main-content">
+            
+            <section class="left-decorations">
+                <div class="ribbon-wrap">
+                    <div class="ribbon"></div>
+                    <div class="clover-decor">🍀</div>
+                </div>
+                <div class="apple-img">
+                    <span class="emoji">🍎</span>
+                </div>
+            </section>
+            
+            <section class="calculator-section">
+                
+                <div class="info-box">
+                    <p class="box-title">¡Cálculo Automático! 🎵</p>
+                    <div class="box-content">
+                        <p>
+                            Instrucciones: Ingresa la nota obtenida (máximo 20) en las 10 materias. El promedio se actualizará automáticamente abajo.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grade-fields">
+                    <h2>📚 Ingresa tus Notas (Máximo 20)</h2>
+                    
+                    <form id="average-form">
+                        <div class="grade-row">
+                            <label for="ingles">1. Inglés:</label>
+                            <input type="number" id="ingles" name="ingles" min="0" max="20" placeholder="0 - 20">
+                        </div>
+                        <div class="grade-row">
+                            <label for="quimica">2. Química:</label>
+                            <input type="number" id="quimica" name="quimica" min="0" max="20" placeholder="0 - 20">
+                        </div>
+                        <div class="grade-row">
+                            <label for="fisica">3. Física:</label>
+                            <input type="number" id="fisica" name="fisica" min="0" max="20" placeholder="0 - 20">
+                        </div>
+                        <div class="grade-row">
+                            <label for="biologia">4. Biología:</label>
+                            <input type="number" id="biologia" name="biologia" min="0" max="20" placeholder="0 - 20">
+                        </div>
+                        <div class="grade-row">
+                            <label for="ghc">5. GHC:</label>
+                            <input type="number" id="ghc" name="ghc" min="0" max="20" placeholder="0 - 20">
+                        </div>
+                        <div class="grade-row">
+                            <label for="castellano">6. Castellano:</label>
+                            <input type="number" id="castellano" name="castellano" min="0" max="20" placeholder="0 - 20">
+                        </div>
+                        <div class="grade-row">
+                            <label for="tecnologia">7. Tecnología:</label>
+                            <input type="number" id="tecnologia" name="tecnologia" min="0" max="20" placeholder="0 - 20">
+                        </div>
+                        <div class="grade-row">
+                            <label for="matematicas">8. Matemáticas:</label>
+                            <input type="number" id="matematicas" name="matematicas" min="0" max="20" placeholder="0 - 20">
+                        </div>
+                        <div class="grade-row">
+                            <label for="orientacion">9. Orientación:</label>
+                            <input type="number" id="orientacion" name="orientacion" min="0" max="20" placeholder="0 - 20">
+                        </div>
+                        <div class="grade-row">
+                            <label for="educacion_fisica">10. Educación Física:</label>
+                            <input type="number" id="educacion_fisica" name="educacion_fisica" min="0" max="20" placeholder="0 - 20">
+                        </div>
+                        
+                        <div class="result-box">
+                            <p>⭐ TU PROMEDIO FINAL ⭐</p>
+                            <p>El promedio es: <span class="average-result" id="final-average">0.00 / 20</span></p>
+                        </div>
+                        
+                        <button type="reset" class="calculate-button">Limpiar Campos</button>
+                    </form>
+                </div>
+
+            </section>
+        </main>
+        
+        <footer class="footer-note">
+            <p> 💖 </p>
+            <p><em>Una nota no te define, tu actitud si.</em></p>
+        </footer>
+
+    </div>
+    <script src="script.js"></script> 
+</body>
+</html>

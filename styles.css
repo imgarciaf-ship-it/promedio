@@ -1,0 +1,289 @@
+/* Variables de Color (Para facilitar la modificación de la paleta) */
+:root {
+    --color-pink-light: #FFEDED; /* Rosa muy claro */
+    --color-pink-medium: #FFC0CB; /* Rosa Chicle/Pastel */
+    --color-green-light: #E0FFE0; /* Verde muy claro */
+    --color-green-medium: #A2E6A2; /* Verde Pastel */
+    --color-text-dark: #6B4949; /* Marrón/Rojo oscuro para el texto */
+    --color-text-green: #3D7A3D; /* Verde oscuro para las cajas */
+}
+
+/* Estilos Globales y Fondo */
+body {
+    font-family: 'Gochi Hand', cursive; /* Fuente para simular el estilo 'cute' */
+    background-color: var(--color-pink-light);
+    color: var(--color-text-dark);
+    margin: 0;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 700px;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Patrones de Fondo Similares a la Imagen */
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Simula el patrón de cuadros y rayas del diseño */
+    background-image: 
+        repeating-linear-gradient(45deg, var(--color-green-light) 0, var(--color-green-light) 10px, transparent 10px, transparent 20px),
+        repeating-linear-gradient(-45deg, var(--color-pink-light) 0, var(--color-pink-light) 10px, transparent 10px, transparent 20px);
+    opacity: 0.3;
+    z-index: -1;
+}
+
+/* Encabezado (Your Title Here) */
+.header-box {
+    background-color: var(--color-green-medium);
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 20px;
+    text-align: center;
+    border: 3px solid var(--color-text-dark);
+}
+
+.main-title {
+    font-size: 2.5em;
+    color: var(--color-text-dark);
+    margin-bottom: 5px;
+}
+
+.sub-title {
+    font-size: 1.2em;
+    color: var(--color-text-dark);
+    margin-top: 0;
+}
+
+/* Navegación (about me / links) */
+.nav-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--color-pink-medium);
+    padding: 10px 0;
+    margin: 0 20px;
+    border-radius: 10px;
+    border: 2px solid var(--color-text-dark);
+    position: relative;
+    z-index: 1; /* Para que esté sobre el encaje */
+}
+
+.nav-item {
+    background-color: var(--color-pink-light);
+    padding: 5px 15px;
+    border-radius: 15px;
+    border: 2px solid var(--color-text-dark);
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.clover {
+    font-size: 1.5em;
+    color: var(--color-text-green);
+    margin: 0 10px;
+}
+
+/* Simulación de Encaje/Blondas */
+.container::after {
+    content: '';
+    position: absolute;
+    top: 150px; /* Ajustar según la altura del header y nav */
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-image: radial-gradient(circle at 10px 10px, transparent 12px, var(--color-pink-medium) 12px);
+    background-size: 20px 20px;
+    background-repeat: repeat-x;
+    transform: rotate(180deg);
+    opacity: 0.8;
+}
+
+/* Contenido Principal */
+.main-content {
+    display: flex;
+    padding: 30px 20px;
+    position: relative;
+    border-top: 1px dashed var(--color-pink-medium);
+    margin-top: 20px;
+}
+
+/* Decoraciones Izquierdas (Cinta y Manzana) */
+.left-decorations {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.ribbon-wrap {
+    position: relative;
+    width: 60px;
+    height: 200px;
+}
+
+.ribbon {
+    width: 15px;
+    height: 100%;
+    background-color: var(--color-green-medium);
+    border-radius: 50%;
+    transform: rotate(15deg);
+}
+
+.clover-decor {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    font-size: 2em;
+    color: var(--color-text-green);
+}
+
+.apple-img .emoji {
+    font-size: 4em;
+    margin-top: 20px;
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.1));
+}
+
+/* Sección de la Calculadora */
+.calculator-section {
+    width: 70%;
+    padding-left: 20px;
+}
+
+/* Caja de Información (Texto Verde) */
+.info-box {
+    background-color: var(--color-green-light);
+    border: 2px dashed var(--color-text-green);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: var(--color-text-green);
+}
+
+.box-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.box-content {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Campos del Formulario */
+.grade-fields h2 {
+    font-size: 1.5em;
+    color: var(--color-text-dark);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.grade-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 3px 0;
+    border-bottom: 1px dotted var(--color-pink-medium);
+}
+
+.grade-row label {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.grade-row input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    border: 2px solid var(--color-green-medium);
+    border-radius: 5px;
+    text-align: center;
+    font-family: inherit;
+    font-size: 1em;
+}
+
+/* Botón y Resultado */
+.result-box {
+    background-color: var(--color-pink-light);
+    border: 3px solid var(--color-pink-medium);
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.average-result {
+    font-size: 1.5em;
+    color: var(--color-text-green);
+    font-weight: bold;
+}
+
+.calculate-button {
+    display: block;
+    width: 80%;
+    margin: 15px auto 0;
+    padding: 10px 20px;
+    background-color: var(--color-green-medium);
+    color: var(--color-text-dark);
+    border: 3px solid var(--color-text-dark);
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.calculate-button:hover {
+    background-color: var(--color-green-light);
+}
+
+/* Pie de Página */
+.footer-note {
+    background-color: var(--color-pink-medium);
+    padding: 10px 20px;
+    text-align: center;
+    border-top: 5px dashed white;
+    margin-top: 20px;
+}
+
+.footer-note p {
+    margin: 5px 0;
+    color: var(--color-text-dark);
+}
+
+/* Ajuste para pantallas más pequeñas */
+@media (max-width: 600px) {
+    .main-content {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .left-decorations, .calculator-section {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    .ribbon-wrap {
+        display: none; /* Ocultar la cinta en móvil para ahorrar espacio */
+    }
+}
